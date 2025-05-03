@@ -1,0 +1,310 @@
+/* Bosh stil */
+* {
+  margin: 0; /* Barcha elementlar uchun tashqi bo'shliqni o'chiradi */
+  padding: 0; /* Barcha elementlar uchun ichki bo'shliqni o'chiradi */
+  box-sizing: border-box; /* Har bir elementning umumiy o'lchamiga chegarani qo'shadi */
+  font-family: 'Segoe UI', sans-serif; /* Umumiy shrift tanlovi */
+}
+
+body {
+  background: linear-gradient(-45deg, #40916c, #f5f5dc, #a8dadc, #f1faee);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  color: #333; /* Matn rangi qora */
+  display: flex; /* Flexbox layoutini yoqadi */
+  justify-content: center; /* Yondoshuvni markazlashtiradi */
+  align-items: center; /* Vertikal markazlashadi */
+  min-height: 100vh; /* Sahifa balandligini to'liq qamrab oladi */
+  font-size: 16px; /* Matnning umumiy o'lchami */
+}
+
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} 
+
+/* Umumiy konteyner */
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(-45deg, #3784a3, #2a9d8f, #044bae, #6a994e);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  transition: all 0.5s ease;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Profil rasmi */
+.avatar {
+  width: 100px; /* Profil rasmi kengligi */
+  height: 100px; /* Profil rasmi bo'yi */
+  border-radius: 50%; /* Dumaloq shakl */
+  border: 2px solid #e2e8f0; /* Yengil kulrang chegaralar */
+  margin-bottom: 1rem; /* Pastdan bo'shliq */
+  object-fit: cover; /* Rasmni to'liq joylashtirish */
+}
+
+/* Tugmalar */
+.buttons {
+  display: flex; /* Tugmalarni flexbox yordamida tartibga solish */
+  flex-direction: column; /* Tugmalarni vertikal tartibda joylashtirish */
+  gap: 15px; /* Tugmalar orasidagi masofa */
+  margin-top: 1rem; /* Yuqoridan bo'shliq */
+}
+
+button {
+  padding: 12px 20px; /* Tugma ichidagi bo'shliq */
+  background-color: transparent; /* Fonda shaffoflik */
+  border: 2px solid #8d99ae; /* Kulrang chegara */
+  color: #cbc9c9; /* Matn qora rangda */
+  font-size: 14px; /* Matn o'lchami */
+  font-weight: 500; /* O'rta semizlik */
+  border-radius: 10px; /* Burchaklarni yumshatish */
+  cursor: pointer; /* Ko'rsatgichni ko'rsatilishini belgilash */
+  text-transform: uppercase; /* Matnni katta harfga aylantirish */
+  transition: all 0.3s ease; /* O'tish animatsiyasi */
+}
+
+button:hover {
+  background-color: #2d6a4f; /* Yashil fon */
+  color: #fff; /* Matn oq rangga o'zgaradi */
+  transform: scale(1.05); /* Tugmani kattalashtirish */
+}
+
+/* Kontent chiqadigan qism */
+.content {
+  margin-top: 20px; /* Yuqoridan bo'shliq */
+  text-align: left; /* Matnni chapga qaratish */
+  display: none; /* Boshlang'ichda yashirish */
+  animation: fadeInUp 0.5s ease forwards; /* Animatsiya */
+  border: 1px solid #006eff; /* Yengil kulrang chegara */
+  padding: 15px; /* Ichki bo'shliq */
+  border-radius: 10px; /* Burchaklarni yumshatish */
+  background-color: #044bae; /* Pastel kulrang fon */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Yengil soyalar */
+}
+
+/* Animatsiya */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Boshlang'ichda ko'rinmas */
+    transform: translateY(20px); /* Yuqoriga ko'chish */
+  }
+  to {
+    opacity: 1; /* Ko'rinadigan holatga o'tish */
+    transform: translateY(0); /* Joylashish */
+  }
+}
+
+/* Tugmalar ranglari */
+#aboutBtn, #channelsBtn, #contactBtn {
+  background-color: transparent;
+  border-color: #8d99ae;
+}
+
+#aboutBtn:hover, #channelsBtn:hover, #contactBtn:hover {
+  background-color: #2d6a4f; /* Yashil fon */
+  color: #fff;
+}
+
+/* Orqaga qaytish tugmasi */
+.back-btn {
+  margin-top: 20px; /* Yuqoridan bo'shliq */
+  display: inline-block; /* Inline-block shaklida ko'rsatish */
+  background: transparent;
+  padding: 10px 20px; /* Ichki bo'shliq */
+  color: #333;
+  border: 2px solid #8d99ae; /* Yengil kulrang chegaralar */
+  border-radius: 10px; /* Burchaklarni yumshatish */
+  cursor: pointer; /* Ko'rsatgichni ko'rsatish */
+  transition: all 0.3s ease; /* O'tish animatsiyasi */
+}
+
+.back-btn:hover {
+  background: #2d6a4f; /* Yashil fon */
+  color: #fff; /* Matn oq rangga o'zgaradi */
+}
+
+/* Bog‘lanish tugmalari – ustma-ust va to‘liq uzunlik */
+.contact-links {
+  display: flex; /* Flexbox layoutini qo'llash */
+  flex-direction: column; /* Vertikal tartibda joylashtirish */
+  gap: 20px; /* Bo'shliq */
+  margin-top: 20px; /* Yuqoridan bo'shliq */
+}
+
+.contact-item {
+  display: flex; /* Flexboxni ishlatish */
+  align-items: center; /* Elementlarni markazlashtirish */
+  background: #3784a3; /* Oq fon */
+  padding: 12px; /* Ichki bo'shliq */
+  border-radius: 12px; /* Yumshoq burchaklar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Yengil soyalar */
+  gap: 15px; /* Elementlar orasida masofa */
+  transition: all 0.3s ease; /* O'tish animatsiyasi */
+}
+
+.contact-item:hover {
+  transform: scale(1.05); /* Hoverda kattalashtirish */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Kengaytirilgan soyalar */
+}
+
+.contact-item img {
+  width: 50px; /* Rasmning o'lchami */
+  height: 50px;
+  border-radius: 50%; /* Dumaloq shakl */
+  object-fit: cover; /* Rasmni to'liq joylashtirish */
+  border: 2px solid #e2e8f0; /* Yengil kulrang chegaralar */
+}
+
+.contact-info {
+  display: flex; /* Flexboxni ishlatish */
+  flex-direction: column; /* Vertikal joylashish */
+  gap: 5px; /* Bo'shliq */
+}
+
+.contact-info p {
+  font-weight: 500; /* O'rta semiz matn */
+  color: #ffffff; /* Matn rangi qora */
+  margin: 0; /* Hech qanday bo'shliq */
+  font-size: 16px; /* Matn o'lchami */
+}
+
+.contact-info a {
+  background-color: transparent; /* Fonda shaffoflik */
+  color: #ffffff; /* Matn qora rangda */
+  padding: 8px 12px; /* Ichki bo'shliq */
+  border-radius: 8px; /* Yumshoq burchaklar */
+  text-decoration: none; /* Matnni bezashdan saqlanish */
+  border: 2px solid #ffffff; /* Kulrang chegara */
+  font-size: 14px; /* Matn o'lchami */
+  transition: all 0.3s ease; /* O'tish animatsiyasi */
+}
+
+.contact-info a:hover {
+  background-color: #2d6a4f; /* Yashil fon */
+  color: #fff; /* Matn oq rangga o'zgaradi */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Yengil soyalar */
+}
+
+/* Animatsiya */
+@keyframes slideIn {
+  from {
+    opacity: 0; /* Boshlang'ichda ko'rinmas */
+    transform: scale(0.9); /* Kichraytirish */
+  }
+  to {
+    opacity: 1; /* Ko'rinadigan holatga o'tish */
+    transform: scale(1); /* Normal o'lchamga o'tish */
+  }
+}
+
+.modal {
+  border: 2px solid #fff; /* Oq chegara */
+  padding: 20px; /* Ichki bo'shliq */
+  border-radius: 15px; /* Yumshoq burchaklar */
+  background-color: rgba(255, 255, 255, 0.08); /* Yengil shaffof fon */
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.3); /* Yorqin soyalar */
+  animation: slideIn 0.6s ease forwards; /* Animatsiya */
+}
+
+.channel-links {
+  display: flex; /* Flexbox layoutini qo'llash */
+  flex-direction: column; /* Vertikal tartibda joylashtirish */
+  gap: 15px; /* Bo'shliq */
+  margin-top: 15px; /* Yuqoridan bo'shliq */
+}
+
+.channel-item {
+  display: flex; /* Flexboxni ishlatish */
+  align-items: center; /* Elementlarni markazlashtirish */
+  background: rgba(255, 255, 255, 0.08); /* Shaffof fon */
+  padding: 12px; /* Ichki bo'shliq */
+  border-radius: 12px; /* Yumshoq burchaklar */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Yengil soyalar */
+  gap: 15px; /* Elementlar orasida masofa */
+}
+
+.channel-item img {
+  width: 70px; /* Rasmning o'lchami */
+  height: 70px;
+  border-radius: 50%; /* Dumaloq shakl */
+  object-fit: cover; /* Rasmni to'liq joylashtirish */
+  border: 2px solid #fff; /* Oq chegara */
+}
+
+.channel-info {
+  display: flex; /* Flexboxni ishlatish */
+  flex-direction: column; /* Vertikal joylashish */
+  gap: 6px; /* Bo'shliq */
+}
+
+.channel-info p {
+  font-weight: bold; /* Semiz matn */
+  color: #333; /* Matn rangi qora */
+  margin: 0; /* Hech qanday bo'shliq */
+  font-size: 16px; /* Matn o'lchami */
+}
+
+.channel-info a {
+  background-color: #ffffff20; /* Yengil shaffof fon */
+  color: #fff; /* Matn oq rangda */
+  padding: 8px 12px; /* Ichki bo'shliq */
+  border-radius: 8px; /* Yumshoq burchaklar */
+  text-decoration: none; /* Matnni bezashdan saqlanish */
+  border: 1px solid #fff; /* Oq chegara */
+  transition: all 0.3s ease; /* O'tish animatsiyasi */
+  display: inline-block;
+  width: fit-content; /* O'lchamni moslashtirish */
+}
+
+.channel-info a:hover {
+  background-color: #ffffff40; /* Yengil shaffof fon */
+  transform: scale(1.03); /* Kattalashtirish */
+}
+
+.back-btn {
+  margin-top: 20px; /* Yuqoridan bo'shliq */
+  display: inline-block; /* Inline-block shaklida ko'rsatish */
+  background: #014d2a; /* Qizil fon */
+  padding: 8px 16px; /* Ichki bo'shliq */
+  color: #fff; /* Matn oq rangda */
+  border: none; /* Chegarasiz */
+  border-radius: 8px; /* Yumshoq burchaklar */
+  cursor: pointer; /* Ko'rsatgichni ko'rsatish */
+  transition: background 0.3s; /* O'tish animatsiyasi */
+}
+
+.back-btn:hover {
+  background: #06a35c; /* Qizil fonni qoraytirish */
+}

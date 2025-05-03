@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz"> <!-- Saytning tilini o'zbek tiliga belgilash -->
+<head>
+  <meta charset="UTF-8" /> <!-- Sahifa kodlashni UTF-8 qilib o'rnatish (maxsus belgilarni qo'llab-quvvatlaydi) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Mobil qurilmalar uchun mos ravishda ko'rsatish -->
+  <title>Shaxsiy Portfolio</title> <!-- Sahifaning sarlavhasi, brauzerda ko'rinadi -->
+  <link rel="stylesheet" href="profile1.css" /> <!-- CSS faylini ulash -->
+  <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container"> <!-- Asosiy konteyner: barcha elementlarni o'z ichiga oladi -->
+    <div class="profile"> <!-- Profil qismi: foydalanuvchi ma'lumotlari -->
+      <img src="12345.jpg" alt="Men" class="avatar" /> <!-- Profil rasmi -->
+      <h1>Otabek Jo'raboyev</h1> <!-- Foydalanuvchining ismi -->
+      <p>OTTO WIBE</p> <!-- Instagram yoki Telegram username -->
+    </div>
+
+    <div class="buttons"> <!-- Tugmalar bloki -->
+      <button id="aboutBtn"><i class='bx bx-user'></i>   Men haqimda</button> <!-- "Men haqimda" tugmasi -->
+      
+      <button id="channelsBtn"><i class='bx bxs-user-account'></i>   Kanallarim</button> <!-- "Kanallarim" tugmasi -->
+      <button id="contactBtn"><i class='bx bxs-phone-call' ></i>   Bog'lanish</button> <!-- "Bog'lanish" tugmasi -->
+    </div>
+
+    <div class="content" id="content"> <!-- "content" bo'limi, bu yerga ma'lumotlar chiqadi -->
+      content div ichiga qo‘shiladigan qism <!-- Bu izoh ma'lumotlarga xizmat qiladi -->
+      <div id="channelsContent" class="content" style="display: none;"> <!-- Kanallar bo'limi (by default yashirin) -->
+        <div class="channel-links"> <!-- Kanallar ro'yxati -->
+           <div class="channel-item"> <!-- YouTube kanali -->
+            <img src="img/yt.png" alt="YouTube" /> <!-- YouTube kanalining rasmik logo -->
+            <div class="channel-info"> <!-- Kanal haqida ma'lumot -->
+             <p>YouTube</p> <!-- Kanal nomi -->
+             <a href="https://youtube.com/@YourChannel" target="_blank">Ko‘rish</a> <!-- YouTube kanaliga havola -->
+             </div>
+            </div>
+
+          <div class="channel-item"> <!-- Telegram kanali -->
+            <img src="img/tg.png" alt="Telegram" /> <!-- Telegram kanalining rasmik logo -->
+            <div class="channel-info"> <!-- Kanal haqida ma'lumot -->
+              <p>Telegram</p> <!-- Kanal nomi -->
+              <a href="https://t.me/YourChannel" target="_blank">Ko‘rish</a> <!-- Telegram kanaliga havola -->
+            </div>
+          </div>
+
+           <div class="channel-item"> <!-- Instagram kanali -->
+              <img src="img/insta.png" alt="Instagram" /> <!-- Instagram kanalining rasmik logo -->
+              <div class="channel-info"> <!-- Kanal haqida ma'lumot -->
+                <p>Instagram</p> <!-- Kanal nomi -->
+                <a href="https://instagram.com/YourChannel" target="_blank">Ko‘rish</a> <!-- Instagram kanaliga havola -->
+              </div>
+             </div>
+           </div>
+        </div>
+
+    </div>
+  </div>
+
+  <script src="profil.js"></script> <!-- JS faylini ulash -->
+</body>
+</html>
